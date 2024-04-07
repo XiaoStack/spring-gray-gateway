@@ -1,6 +1,7 @@
 package com.example.springgraygateway.filter;
 
 import com.example.springgraygateway.common.GrayConstant;
+import com.example.springgraygateway.common.GrayRequestContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

@@ -2,7 +2,7 @@ package com.example.springgraygateway.config;
 
 import com.alibaba.cloud.nacos.ribbon.NacosServer;
 import com.example.springgraygateway.common.GrayConstant;
-import com.example.springgraygateway.filter.GrayRequestContextHolder;
+import com.example.springgraygateway.common.GrayRequestContextHolder;
 import com.google.common.base.Optional;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.Server;

@@ -1,4 +1,4 @@
-package com.example.springgraygateway.filter;
+package com.example.springgraygateway.common;
 
 /**
  * XXXX

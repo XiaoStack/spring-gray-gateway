@@ -14,7 +14,6 @@ import org.springframework.context.annotation.FilterType;
 })
 //@EnableFeignClients(basePackages = "com.example.springgraygateway.demos.nacosdiscoveryconsumer")
 @RibbonClients(value = {
-    // 只对文章服务进行灰度发布
     @RibbonClient(value = "spring-gray-article", configuration = GrayRuleConfig.class)
 })
 public class SpringGrayGatewayApplication {
