@@ -3,7 +3,7 @@ package com.example.springgraygateway.config;
 import org.springframework.context.annotation.Bean;
 
 /**
- * XXXX
+ * 灰度规则配置类（按需引入）
  *
  * @author yinyong
  * @version 1.0

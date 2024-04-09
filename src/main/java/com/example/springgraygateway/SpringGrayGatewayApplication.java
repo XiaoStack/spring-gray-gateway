@@ -12,7 +12,6 @@ import org.springframework.context.annotation.FilterType;
 @ComponentScan(basePackages = "com.example.springgraygateway.*", excludeFilters = {
     @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = GrayRuleConfig.class)
 })
-//@EnableFeignClients(basePackages = "com.example.springgraygateway.demos.nacosdiscoveryconsumer")
 @RibbonClients(value = {
     @RibbonClient(value = "spring-gray-article", configuration = GrayRuleConfig.class)
 })

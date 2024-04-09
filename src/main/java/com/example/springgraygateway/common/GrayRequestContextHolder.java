@@ -1,7 +1,7 @@
 package com.example.springgraygateway.common;
 
 /**
- * XXXX
+ * 请求灰度标记存储 上下文
  *
  * @author yinyong
  * @version 1.0

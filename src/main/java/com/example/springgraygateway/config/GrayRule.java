@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * XXXX
+ * 灰度服务负载均衡策略
  *
  * @author yinyong
  * @version 1.0
@@ -60,9 +60,9 @@ public class GrayRule extends ZoneAvoidanceRule {
         }
     }
 
-    private Server originChoose(List<Server> noMetaServerList, Object key) {
+    private Server originChoose(List<Server> serverList, Object key) {
         Optional<Server> serverOptional =
-            getPredicate().chooseRoundRobinAfterFiltering(noMetaServerList, key);
+            getPredicate().chooseRoundRobinAfterFiltering(serverList, key);
         if (serverOptional.isPresent()) {
             return serverOptional.get();
         } else {
