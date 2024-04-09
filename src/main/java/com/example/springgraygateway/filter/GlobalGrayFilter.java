@@ -31,7 +31,7 @@ public class GlobalGrayFilter implements GlobalFilter, Ordered {
         if (headers.containsKey(GrayConstant.GRAY_HEADER)) {
             String gray = headers.getFirst(GrayConstant.GRAY_HEADER);
             if (GrayConstant.GRAY_VALUE.equals(gray)) {
-                // 2.设置灰度标记"Accept" -> {HeadersUtils$1@12573}  size = 1
+                // 2.设置灰度标记"Accept"
                 GrayRequestContextHolder.setGrayTag(true);
             }
             // 3.将灰度标记放入请求头中
@@ -41,6 +41,8 @@ public class GlobalGrayFilter implements GlobalFilter, Ordered {
                 .build();
             ServerWebExchange build = exchange.mutate().request(tokenRequest).build();
             return chain.filter(build);
+        } else {
+            GrayRequestContextHolder.setGrayTag(false);
         }
         return chain.filter(exchange);
     }
